@@ -11,10 +11,10 @@ public class PersonalUntilTests {
 
         //Act
         //run the method or methods which you want to test and assign any outputs to variables
-        String output = PersonUtils.getFullName("Casey", "Edwards");
+        String output = PersonUtils.getFullName("Mitchell", "Hogue");
         //Assert
         // test whether the outputs meet your expectations
-        Assert.assertEquals("Casey Edwards", output);
+        Assert.assertEquals("Mitchell Hogue", output);
 
     }
 
