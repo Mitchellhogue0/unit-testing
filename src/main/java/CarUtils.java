@@ -13,4 +13,10 @@ public class CarUtils {
     public static void addToMileage (Car car, double mileageToAdd) {
         car.setMileage(car.getMileage() + mileageToAdd);
     }
+
+    public static void convertToElectric (Car car, String engineType) {
+        if (engineType.contains("electric") || engineType.contains("ELECTRIC")){
+            car.setElectric(true);
+        }
+    }
 }

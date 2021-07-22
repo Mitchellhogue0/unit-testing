@@ -63,4 +63,40 @@ public class CarDetailsTests {
         //Assert
         Assert.assertEquals(4000, car.getMileage(), 0D);
     }
+
+    @Test
+    public void getCarDetails_GivenValidCar_ReturnExpectedBoolean(){
+        //Arrange
+        Car car = new Car();
+        car.setMake("Ford");
+        car.setModel("Mustang");
+        car.setYear("2019");
+        car.setMileage(2000);
+
+
+        //Act
+        CarUtils.convertToElectric(car, "electric");
+
+
+        //Assert
+        Assert.assertTrue(car.isElectric());
+    }
+
+    @Test
+    public void getCarDetails_GivenValidCar_ReturnExpectedBooleanCap(){
+        //Arrange
+        Car car = new Car();
+        car.setMake("Ford");
+        car.setModel("Mustang");
+        car.setYear("2019");
+        car.setMileage(2000);
+
+
+        //Act
+        CarUtils.convertToElectric(car, "ELECTRIC");
+
+
+        //Assert
+        Assert.assertTrue(car.isElectric());
+    }
 }
