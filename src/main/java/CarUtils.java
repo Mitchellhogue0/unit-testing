@@ -15,7 +15,7 @@ public class CarUtils {
     }
 
     public static void convertToElectric (Car car, String engineType) {
-        if (engineType.contains("electric") || engineType.contains("ELECTRIC")){
+        if (engineType.toLowerCase().contains("electric")){
             car.setElectric(true);
         }
     }
