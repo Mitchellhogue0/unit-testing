@@ -9,4 +9,8 @@ public class CarUtils {
         return car.getColor() + " " + car.getYear() + " " + car.getMake() + " " +  car.getModel();
 
     }
+
+    public static void addToMileage (Car car, double mileageToAdd) {
+        car.setMileage(car.getMileage() + mileageToAdd);
+    }
 }

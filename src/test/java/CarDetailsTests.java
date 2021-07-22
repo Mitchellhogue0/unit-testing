@@ -46,4 +46,21 @@ public class CarDetailsTests {
         //Assert
         Assert.assertEquals("Not able to provide details", details);
     }
+
+    @Test
+    public void getCarDetails_GivenValidCar_ReturnExpectedString(){
+        //Arrange
+        Car car = new Car();
+        car.setMake("Ford");
+        car.setModel("Mustang");
+        car.setYear("2019");
+        car.setMileage(2000);
+
+
+        //Act
+        CarUtils.addToMileage(car, 2000);
+
+        //Assert
+        Assert.assertEquals(4000, car.getMileage(), 0D);
+    }
 }
